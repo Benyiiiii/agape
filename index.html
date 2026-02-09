@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ÁGAPE | Resto-Bar Ceviches & Crudos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container navbar">
+    <a href="#" class="logo-container">
+      <img src="logo-agape.png" alt="Ágape Resto-Bar Logo" class="logo-img">
+    </a>
+
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#concepto">El Concepto</a></li>
+        <li><a href="#carta">Nuestra Carta</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="inicio">
+  <div class="hero-overlay"></div>
+  <div class="hero-content container">
+    <h1 class="hero-title">FUSIÓN, FRESCURA <br> <span class="text-accent">& VIDA NOCTURNA</span></h1>
+    <p class="hero-subtitle">La nueva experiencia en ceviches, crudos y coctelería de autor.</p>
+    <div class="hero-btns">
+      <a href="#carta" class="btn-accent">VER LA CARTA</a>
+      <a href="#reservas" class="btn-outline">RESERVAR MESA</a>
+    </div>
+  </div>
+</section>
+
+<section id="concepto" class="section-padding bg-dark">
+  <div class="container text-center boxes-container">
+    <div class="concept-box">
+      <i class="fas fa-fish text-accent"></i>
+      <h3>Cocina Cruda</h3>
+      <p>Expertos en la frescura del mar. Ceviches y tártaros con pesca del día e ingredientes seleccionados.</p>
+    </div>
+    <div class="concept-box">
+      <i class="fas fa-cocktail text-accent"></i>
+      <h3>Bar de Autor</h3>
+      <p>Coctelería innovadora diseñada para maridar perfectamente con nuestra propuesta gastronómica.</p>
+    </div>
+    <div class="concept-box">
+      <i class="fas fa-music text-accent"></i>
+      <h3>Ambiente Ágape</h3>
+      <p>Un espacio sofisticado donde la cena se transforma en una experiencia nocturna vibrante.</p>
+    </div>
+  </div>
+</section>
+
+<section id="carta" class="section-padding bg-blacker">
+  <div class="container">
+    <h2 class="section-title text-center">DESTACADOS DE <span class="text-accent">LA BARRA</span></h2>
+
+    <div class="menu-grid">
+      <div class="menu-card" style="background-image: url('https://images.unsplash.com/photo-1548943487-a2e4e43b4853?q=80&w=1470&auto=format&fit=crop');">
+        <div class="card-overlay">
+          <h3>Ceviche Nikkei</h3>
+          <p>Atún rojo, leche de tigre oriental, palta y sésamo tostado.</p>
+        </div>
+      </div>
+      <div class="menu-card" style="background-image: url('https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=1557&auto=format&fit=crop');">
+        <div class="card-overlay">
+          <h3>Cóctel "Ágape Sour"</h3>
+          <p>Pisco macerado en hierbas, limón sutil, syrup de jengibre y bitter.</p>
+        </div>
+      </div>
+      <div class="menu-card" style="background-image: url('https://images.unsplash.com/photo-1625937751876-453c35b4fc0d?q=80&w=1374&auto=format&fit=crop');">
+        <div class="card-overlay">
+          <h3>Tártaro de Res</h3>
+          <p>Filete picado a cuchillo, alcaparras, mostaza antigua y yema curada.</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-50">
+      <a href="#" class="btn-outline">DESCARGAR MENÚ COMPLETO (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<footer id="reservas" class="bg-dark section-padding">
+  <div class="container footer-content">
+    <div class="footer-logo">
+      <img src="logo-agape.png" alt="Ágape Logo Pequeño">
+    </div>
+    <div class="footer-info">
+      <h3>RESERVAS & CONTACTO</h3>
+      <p><i class="fab fa-whatsapp text-accent"></i> +56 9 1234 5678</p>
+      <p><i class="fas fa-map-marker-alt text-accent"></i> Av. Principal 123, Ciudad</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="copyright text-center">
+    <p>© 2026 Ágape Resto-Bar. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
+  document.querySelectorAll(".nav-menu a").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+  }));
+</script>
+
+</body>
+</html>
