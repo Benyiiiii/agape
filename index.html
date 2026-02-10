@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ÁGAPE | Resto-Bar Ceviches & Crudos</title>
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -16,17 +17,12 @@
       <img src="logo-agape.png" alt="Ágape Resto-Bar Logo" class="logo-img">
     </a>
 
-    <div class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
 
     <nav class="nav-menu">
       <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#concepto">El Concepto</a></li>
-        <li><a href="#carta">Nuestra Carta</a></li>
+        <li><a href="#galeria">Nuestra Carta</a></li>
         <li><a href="#reservas">Reservas</a></li>
       </ul>
     </nav>
@@ -35,12 +31,29 @@
 
 <section id="inicio">
   <div class="hero-overlay"></div>
+
+  <div class="vertical-wave wave-left">
+    <svg viewBox="0 0 100 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30 0 Q 80 150 30 300 T 30 600" stroke="white" stroke-width="12" stroke-linecap="round"/>
+      <path d="M60 0 Q 110 150 60 300 T 60 600" stroke="white" stroke-width="12" stroke-linecap="round"/>
+      <path d="M90 0 Q 140 150 90 300 T 90 600" stroke="white" stroke-width="12" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <div class="vertical-wave wave-right">
+    <svg viewBox="0 0 100 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30 0 Q 80 150 30 300 T 30 600" stroke="white" stroke-width="12" stroke-linecap="round"/>
+      <path d="M60 0 Q 110 150 60 300 T 60 600" stroke="white" stroke-width="12" stroke-linecap="round"/>
+      <path d="M90 0 Q 140 150 90 300 T 90 600" stroke="white" stroke-width="12" stroke-linecap="round"/>
+    </svg>
+  </div>
+
   <div class="hero-content container">
     <h1 class="hero-title">FUSIÓN, FRESCURA <br> <span class="text-accent">& VIDA NOCTURNA</span></h1>
     <p class="hero-subtitle">La nueva experiencia en ceviches, crudos y coctelería de autor.</p>
     <div class="hero-btns">
-      <a href="#carta" class="btn-accent">VER LA CARTA</a>
-      <a href="#reservas" class="btn-outline">RESERVAR MESA</a>
+      <a href="#carta" class="btn-accent"><i class="fas fa-book-open"></i> VER LA CARTA</a>
+      <a href="#reservas" class="btn-outline"><i class="far fa-calendar-alt"></i> RESERVAR MESA</a>
     </div>
   </div>
 </section>
@@ -65,33 +78,44 @@
   </div>
 </section>
 
-<section id="carta" class="section-padding bg-blacker">
+<section id="galeria" class="section-padding bg-blacker">
   <div class="container">
-    <h2 class="section-title text-center">DESTACADOS DE <span class="text-accent">LA BARRA</span></h2>
+    <h2 class="section-title text-center">LA EXPERIENCIA <span class="text-accent">ÁGAPE</span></h2>
+    <p class="section-subtitle text-center">Sabores que encienden la noche.</p>
 
-    <div class="menu-grid">
-      <div class="menu-card" style="background-image: url('https://images.unsplash.com/photo-1548943487-a2e4e43b4853?q=80&w=1470&auto=format&fit=crop');">
-        <div class="card-overlay">
-          <h3>Ceviche Nikkei</h3>
-          <p>Atún rojo, leche de tigre oriental, palta y sésamo tostado.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item item-1">
+        <div class="gallery-overlay">
+          <i class="fas fa-cocktail"></i>
+          <h3>Coctelería</h3>
         </div>
       </div>
-      <div class="menu-card" style="background-image: url('https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=1557&auto=format&fit=crop');">
-        <div class="card-overlay">
-          <h3>Cóctel "Ágape Sour"</h3>
-          <p>Pisco macerado en hierbas, limón sutil, syrup de jengibre y bitter.</p>
+      <div class="gallery-item item-2">
+        <div class="gallery-overlay">
+          <i class="fas fa-fish"></i>
+          <h3>Ceviches</h3>
         </div>
       </div>
-      <div class="menu-card" style="background-image: url('https://images.unsplash.com/photo-1625937751876-453c35b4fc0d?q=80&w=1374&auto=format&fit=crop');">
-        <div class="card-overlay">
-          <h3>Tártaro de Res</h3>
-          <p>Filete picado a cuchillo, alcaparras, mostaza antigua y yema curada.</p>
+      <div class="gallery-item item-3">
+        <div class="gallery-overlay">
+          <i class="fas fa-users"></i>
+          <h3>Ambiente</h3>
+        </div>
+      </div>
+      <div class="gallery-item item-4">
+        <div class="gallery-overlay">
+          <i class="fas fa-users"></i>
+          <h3>Ambiente</h3>
+        </div>
+      </div>
+      <div class="gallery-item item-5">
+        <div class="gallery-overlay">
+          <i class="fas fa-utensils"></i>
+          <h3>Gastronomía</h3>
         </div>
       </div>
     </div>
-    <div class="text-center mt-50">
-      <a href="#" class="btn-outline">DESCARGAR MENÚ COMPLETO (PDF)</a>
-    </div>
+
   </div>
 </section>
 
@@ -102,16 +126,15 @@
     </div>
     <div class="footer-info">
       <h3>RESERVAS & CONTACTO</h3>
-      <p><i class="fab fa-whatsapp text-accent"></i> +56 9 1234 5678</p>
-      <p><i class="fas fa-map-marker-alt text-accent"></i> Av. Principal 123, Ciudad</p>
+      <p><i class="fab fa-whatsapp text-accent"></i> +56 9 3738 9967</p>
+      <p><i class="fas fa-map-marker-alt text-accent"></i> Itata 1030, Chillan</p>
       <div class="social-links">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/agape_restobar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </div>
   <div class="copyright text-center">
-    <p>© 2026 Ágape Resto-Bar. Todos los derechos reservados.</p>
+    <p>© <script>document.write(new Date().getFullYear())</script> Ágape Resto-Bar. Todos los derechos reservados.</p>
   </div>
 </footer>
 
