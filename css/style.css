@@ -68,52 +68,65 @@ header {
 }
 
 /* =========================================
-   ONDAS LATERALES (CORREGIDO)
+   ONDAS DECORATIVAS (SISTEMA DUAL)
    ========================================= */
 #inicio {
-  position: relative; /* Importante para que las ondas sepan dónde están los bordes */
-  overflow: hidden;   /* Para que no aparezca barra de scroll horizontal */
+  position: relative;
+  overflow: hidden;
 }
 
+/* --- ONDAS VERTICALES (Para PC) --- */
 .vertical-wave {
   position: absolute;
   top: 0;
-  height: 100%;       /* Que ocupe todo el alto de la pantalla */
-  width: 200px;       /* Ancho suficiente para que se vean grandes */
-  z-index: 1;         /* Detrás del texto (el texto suele tener z-index 2 o más) */
+  height: 100%;
+  width: 200px;
+  z-index: 1;
   pointer-events: none;
   opacity: 0.8;
 }
+.vertical-wave svg { height: 100%; width: 100%; filter: drop-shadow(0 0 5px rgba(0,0,0,0.5)); }
+.wave-left { left: -50px; }
+.wave-right { right: -50px; transform: scaleX(-1); }
 
-.vertical-wave svg {
-  height: 100%;
+/* --- ONDAS HORIZONTALES (Para Celular) --- */
+.horizontal-wave {
   width: 100%;
+  height: 80px; /* Altura de las ondas horizontales */
+  margin: 20px 0; /* Espacio con el texto */
+  display: none; /* ¡Ocultas por defecto en PC! */
+}
+.horizontal-wave svg {
+  width: 100%;
+  height: 100%;
   filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
 }
+/* Invertimos la de abajo para que se vea simétrico */
+.wave-bottom { transform: scaleY(-1); }
 
-/* Pegar a la Izquierda */
-.wave-left {
-  left: -50px; /* Un poco escondido para efecto de entrada */
-}
-
-/* Pegar a la Derecha */
-.wave-right {
-  right: -50px;
-  transform: scaleX(-1); /* Espejo para que la curva mire al otro lado */
-}
-
-/* RESPONSIVE */
+/* =========================================
+   RESPONSIVE (EL TRUCO DE MAGIA)
+   ========================================= */
 @media (max-width: 1024px) {
-  .vertical-wave {
-    width: 150px; /* Un poco más chicas en tablets */
-    opacity: 0.4; /* Más sutiles para no molestar la lectura */
-  }
+  .vertical-wave { width: 150px; opacity: 0.4; }
 }
 
 @media (max-width: 768px) {
-  .vertical-wave {
-    display: none; /* En celular las quitamos para limpiar la vista */
-  }
+  /* EN CELULAR: */
+
+  /* 1. Ocultamos las ondas verticales de PC */
+  .desktop-only { display: none !important; }
+
+  /* 2. Mostramos las ondas horizontales de Celular */
+  .mobile-only { display: block !important; }
+
+  /* Ajustes de texto y galería... */
+  .hero-title { font-size: 3rem; }
+  .hero-subtitle { font-size: 1.1rem; }
+  .boxes-container { flex-direction: column; }
+  .gallery-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .gallery-item { height: 250px; grid-column: auto !important; grid-row: auto !important; }
+  .btn-accent, .btn-outline { width: 100%; margin-right: 0; }
 }
 
 /* --- MENÚ HAMBURGUESA --- */
