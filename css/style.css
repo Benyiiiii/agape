@@ -289,6 +289,21 @@ header {
   transition: 0.3s;
 }
 
+/* BUSCA ESTO Y MODIFICA EL MARGIN-BOTTOM */
+.section-title {
+  font-family: var(--font-head);
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 15px; /* <--- CAMBIADO A 15px (antes era 50px) */
+}
+
+/* AGREGA ESTO JUSTO DEBAJO DE .section-title */
+.section-subtitle {
+  color: var(--text-gray);
+  font-size: 1.1rem;
+  margin-bottom: 30px; /* <--- ESTE ES EL ESPACIO GRANDE ANTES DE LAS FOTOS */
+  font-weight: 300;
+}
 /* Asignar posiciones (Mosaico) */
 .item-1 {
   grid-column: 1 / 3; /* Ocupa 2 columnas */
@@ -409,4 +424,10 @@ header {
   .hero-title { font-size: 3rem; }
   .boxes-container { flex-direction: column; }
   .btn-accent, .btn-outline { width: 100%; text-align: center; margin-right: 0; }
+}
+
+/* AJUSTE: Subir el título de la Galería */
+#galeria {
+  padding-top: 30px; /* Reducimos el espacio de arriba (antes era 80px) */
+  padding-bottom: 80px; /* Mantenemos el espacio de abajo */
 }
